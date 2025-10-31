@@ -12,7 +12,7 @@ jobs:
        CI: true
     strategy:
          matrix:
-           node-version: [14.x, 16.x]
+           node-version: [18.x, 20.x]
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Build client
-        run: npm run build --prefix 
+        run: npm run build --prefix client
       
       - name: test
         run: npm test
